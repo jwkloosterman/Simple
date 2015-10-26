@@ -62,29 +62,43 @@ margin: 27px 0 0 40px;
 color: #a3a3a3;
 }
 
-/*HERO NAVIGATION*/
 
 /*HERO ELEMENTS*/
 
 .hero {
+	display: table;
 	background: url(../img/background.jpg) center center no-repeat;
 	background-size: cover;
 	height: 1010px;
 	width: 100%;
 }
 
-.title{
-	padding-top: 315px;
-	margin: auto;
+
+
+.hero ul{
+	display: table-cell;
+	vertical-align: middle;
 }
+
+/*.hero ul {
+	position: relative;
+	top: 50%;
+	left: 50%; 
+	/*transform: translate(50%, 50%)
+}*/
 
 .title h1 {
 font-size: 120px;
 color: white;
 margin-bottom: 60px;
 line-height: 1.25;
-width: 60%;
+width: 62%;
 margin: 0 auto;
+letter-spacing: 5px;
+}
+
+.hero ul li {
+	text-decoration: none;
 }
 
 .title p {
@@ -113,7 +127,10 @@ margin: 0 auto;
 .hero nav {
 	position: absolute;
 	bottom: 5%;
-	margin: 0 43%;
+	z-index: 2;
+	/*margin: 0 auto;*/
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .hero nav div{
@@ -123,7 +140,8 @@ margin: 0 auto;
 	height: 5px;
 	background-color: #a3a3a3;
 	margin: 0 15px 0 auto;
-}
+
+	}
 
 .hero nav .active{
 	background-color: white;
@@ -139,12 +157,17 @@ h2 {
 	margin-top: 55px;
 	font-size: 40px;
 }
+
 article {
 
 	width: 48%;
 	display: inline-block;
-	margin: 55px 10px 0px 10px;
+	margin: 55px 20px 0 0;
 	padding: 0;
+}
+
+article:nth:child(odd) {
+	margin-left: 20px;
 }
 
 section article figure img {
